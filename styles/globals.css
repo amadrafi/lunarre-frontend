@@ -22,13 +22,6 @@ a {
   font-style: normal;
   }
 
-  @font-face {
-    font-family: 'Helvetica neue';
-    src: url(../assets/helveticaneue/HelveticaNeue.ttf);
-    src: url(../assets/helveticaneue/HelveticaNeue\ Medium.ttf);
-    /* src: url(../assets/helveticaneue/Helvetica\ Neu\ Bold.ttf); */
-  }
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
