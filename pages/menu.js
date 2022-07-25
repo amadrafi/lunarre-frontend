@@ -11,7 +11,7 @@ export default function Menu() {
           <Container type='flex' align='center'>
             <Text family='Antic didone' size='3vw'>Shop All</Text>
           </Container>
-          <Container align='center' type='inline' padding='0 0 0 5em'>
+          <Container align='center' type='inline' padding='0 0 0 6em'>
             <Text family='Helvetica neue' size='1em' spacing='4px' weight='500' margin='0 0 2em 0'>COFFEE</Text>
             <ul style={{opacity: 0.5}}>
               <li><Text family='Helvetica neue' size='1em' spacing='2px' weight='500' margin='0 0 1.2em 0'>Salted Caramel Machiato</Text></li>
