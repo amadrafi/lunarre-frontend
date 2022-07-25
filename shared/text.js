@@ -28,7 +28,9 @@ export const Custom = styled.p`
     display: ${props => props.display? props.display: "block"};
     text-shadow: ${props => props.textShadow ? props.textShadow: "0"};
     border-bottom: ${props => props.bottomBorder ? props.bottomBorder:"0"};
-    text-align: ${props => props.align ? props.align : "start"}
+    text-align: ${props => props.align ? props.align : "start"};
+    letter-spacing: ${props => props.spacing ? props.spacing : "" };
+    font-family: ${props => props.family ? props.family : ""};
 `;
 
 export const Text = (props) => {

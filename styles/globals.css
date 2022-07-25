@@ -15,12 +15,26 @@ a {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Antic didone';
+  src: url('../assets/antic-didone/AnticDidone-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Helvetica neue';
+    src: url(../assets/helveticaneue/HelveticaNeue.ttf);
+    src: url(../assets/helveticaneue/HelveticaNeue\ Medium.ttf);
+    /* src: url(../assets/helveticaneue/Helvetica\ Neu\ Bold.ttf); */
+  }
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
     color: white;
-    background: #E8DED2;
+    background: #FFFEF3;
   }
 }
