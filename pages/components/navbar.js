@@ -18,7 +18,7 @@ const Navbar = () => {
         </Container>
         <Container type='flex' align='center' justify='center'>
             <Container type='image' height='80%' width='100%'>
-                <Image src={lunarreLogo} objectFit='contain' layout="fill"/>
+                <Link href='/'><a><Image src={lunarreLogo} objectFit='contain' layout="fill"/></a></Link>
             </Container>
         </Container>
         <Container type='flex' align='center' justify='center'>
