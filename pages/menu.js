@@ -1,9 +1,10 @@
+import { Container } from "../shared/container";
 
 
 export default function Menu() {
     return (
-      <div>
+      <Container type="grid">
 
-      </div>
+      </Container>
     )
   }

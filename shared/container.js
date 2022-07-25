@@ -7,7 +7,7 @@ export const DefaultContainer = styled.div`
     height: ${props => props.height ? props.height : "auto"};
     flex: ${props => props.flex ? props.flex : "0 1 auto"}; 
     padding: ${props => props.padding ? props.padding : "0"};
-    background-color: ${props => props.color ? props.color : "white"};
+    background-color: ${props => props.color ? props.color : "none"};
     border-bottom: ${props => props.borderBottom ? props.borderBottom : "medium none color"};
     position: ${props => props.position ? props.position : "static"};
     border-radius: ${props => props.radius ? props.radius : "0"};
@@ -24,13 +24,15 @@ export const FlexContainer = styled(DefaultContainer)`
 export const GridContainer = styled(DefaultContainer)`
     display: grid;
     grid-template-columns: ${props => props.column ? props.column: ""}; 
-    grid-template-rows: ${props => props.row ? props.column: ""}; 
+    grid-template-rows: ${props => props.row ? props.row: ""}; 
     gap: ${props => props.gap ? props.gap: ""}; 
     
 `
 
 export const ImageContainer = styled(DefaultContainer)`
     position: relative;
+    height: ${props => props.height ? props.height: "100%"};
+    width: ${props => props.width ? props.width: "100%"};
 `
 
 export const Container = (props) => {
