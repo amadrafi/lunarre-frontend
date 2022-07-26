@@ -11,7 +11,8 @@ export const DefaultContainer = styled.div`
     border-bottom: ${props => props.borderBottom ? props.borderBottom : "medium none color"};
     position: ${props => props.position ? props.position : "static"};
     border-radius: ${props => props.radius ? props.radius : "0"};
-    z-index: ${props => props.zIndex ? props.zIndex: "0"}
+    z-index: ${props => props.zIndex ? props.zIndex: "0"};
+    opacity: ${props => props.opacity ? props.opacity: ""};
 `
 
 export const FlexContainer = styled(DefaultContainer)`
