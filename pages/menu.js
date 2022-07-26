@@ -1,5 +1,6 @@
 import { Container } from "../shared/container";
 import { Text } from "../shared/text";
+import { motion } from 'framer-motion';
 import Navbar from "./components/navbar";
 import Link from "next/link";
 
@@ -7,11 +8,13 @@ import Link from "next/link";
 function MenuItem(props) {
   return (
     <li>
-      <Text family='Helvetica neue' size='1em' spacing='2px' weight='500' margin='0 0 1.2em 0' >
-        <Link href={props.link}>
-          <a>{props.itemName}</a>
-        </Link>
-      </Text>
+      <motion.div style={{opacity: 0.4}} whileHover={{opacity: 1}}>
+        <Text family='Helvetica neue' size='1em' spacing='2px' weight='400' margin='0 0 1.2em 0' >
+          <Link href={props.link}>
+            <a>{props.itemName}</a>
+          </Link>
+        </Text>
+      </motion.div>
     </li>
   )
 }
@@ -33,7 +36,7 @@ export default function Menu() {
           </Container>
           <Container align='center' type='inline' padding='0 0 0 6em'>
             <Text family='Helvetica neue' size='1em' spacing='4px' weight='500' margin='0 0 2em 0'>COFFEE</Text>
-            <ul style={{opacity: 0.5}}>
+            <ul>
               <MenuItem
                 itemName='Salted Caramel Machiato'
                 link='' />
@@ -56,7 +59,7 @@ export default function Menu() {
           </Container>
           <Container align='center' type='inline' padding='0 0 0 2em'>
             <Text family='Helvetica neue' size='1em' spacing='4px' weight='500' margin='0 0 2em 0'>NON COFFEE</Text>
-            <ul style={{opacity: 0.5}}>
+            <ul>
               <MenuItem 
                 itemName='Lychee Tea'
                 link='' />
@@ -70,7 +73,7 @@ export default function Menu() {
           </Container>
           <Container align='center' type='inline' padding='0 0 0 3em'>
             <Text family='Helvetica neue' size='1em' spacing='4px' weight='500' margin='0 0 2em 0'>MOCKTAILS</Text>
-            <ul style={{opacity: 0.5}}>
+            <ul>
               <MenuItem
                 itemName='Berry Berry'
                 link='' />
