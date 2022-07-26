@@ -30,7 +30,7 @@ export default function Menu() {
       <>
         <Navbar />
 
-        <Container type='grid' column='2fr 4fr 3fr 3fr' margin='10vh 10vw 0 10vw'>
+        <Container type='grid' column='2fr 4fr 3fr 3fr' margin='8vw 10vw'>
           <Container type='flex' align='center'>
             <Text family='Antic didone' size='3vw'>Shop All</Text>
           </Container>
@@ -88,6 +88,10 @@ export default function Menu() {
                 link='' />
             </ul>
           </Container>
+        </Container>
+
+        <Container>
+
         </Container>
       </>
     )
