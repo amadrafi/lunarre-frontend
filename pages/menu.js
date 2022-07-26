@@ -3,7 +3,7 @@ import { Text } from "../shared/text";
 import Navbar from "./components/navbar";
 import Link from "next/link";
 
-// use this to print menu an use itemName and link as props
+
 function MenuItem(props) {
   return (
     <li>
@@ -16,11 +16,17 @@ function MenuItem(props) {
   )
 }
 
+// Guide to print Menu
+// 1. each li is set in a function called MenuItem but it must be a child of ul
+// 2. there are two props, 1: itemName, 2:link
+// 3. itemName describes the name of the drink
+// 4. link is supposed to be a link for the pop up page
 
 export default function Menu() {
     return (
       <>
         <Navbar />
+
         <Container type='grid' column='2fr 4fr 3fr 3fr' margin='10vh 10vw 0 10vw'>
           <Container type='flex' align='center'>
             <Text family='Antic didone' size='3vw'>Shop All</Text>
