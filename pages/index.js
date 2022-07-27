@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container } from "../shared/container";
 import { Text } from "../shared/text"
-import Navbar from "./components/navbar";
+import Navbar from "../components/navbar";
 
 export default function Home() {
   return (
