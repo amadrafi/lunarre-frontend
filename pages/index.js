@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Container } from "../shared/container";
 import { Text } from "../shared/text"
 import Navbar from "../components/navbar";
+import Carousel from "../components/carousel";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       </Head>
       <Navbar/>
       <Container color="none">
-        <Text type="h1">Hello World</Text>
+        <Carousel />
       </Container>
     </>
   )
