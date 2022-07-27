@@ -6,7 +6,7 @@ export const PrimaryButton = styled.button`
     cursor: pointer;
     
     box-shadow: ${props => props.shadow ? props.shadow : "0px 3px 8px rgba(0, 0, 0, 0.2)"};
-    background: ${props => props.background ? props.background : "#F8D57A"};
+    background: ${props => props.background ? props.background : "#FFFEF3"};
     border-radius: ${props => props.radius ? props.radius:"50px"};
     margin: ${props => props.margin ? props.margin : "1em 0 0 0"};
     padding: ${props => props.padding ? props.padding : "0.75em 2em"};
