@@ -1,4 +1,4 @@
-import { Text } from "../../shared/text"
+import { Text } from "../shared/text"
 
 
 const Popup = () => {

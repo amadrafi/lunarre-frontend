@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Container } from "../../shared/container";
-import { Text } from "../../shared/text";
-import lunarreLogo from "../../assets/lunarre-logo.png";
+import { Container } from "../shared/container";
+import { Text } from "../shared/text";
+import lunarreLogo from "../assets/lunarre-logo.png";
 import Link from "next/link";
 
 const Navbar = () => {
