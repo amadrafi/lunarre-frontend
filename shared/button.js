@@ -16,6 +16,7 @@ export const PrimaryButton = styled.button`
     border: ${props => props.border ? props.border : "none"};
     letter-spacing: ${props => props.spacing ? props.spacing : "" };
     font-family: ${props => props.family ? props.family : ""};
+    color: ${props => props.color ? props.color : "black"}
 `
 
 export const SecondaryButton = styled(PrimaryButton)`
