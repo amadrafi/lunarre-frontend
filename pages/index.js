@@ -3,6 +3,7 @@ import { Container } from "../shared/container";
 import { Text } from "../shared/text"
 import Navbar from "../components/navbar";
 import Carousel from "../components/carousel";
+import NewArrivals from "../components/newArrivals";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar/>
       <Container color="none">
         <Carousel />
+        <NewArrivals />
       </Container>
     </>
   )
