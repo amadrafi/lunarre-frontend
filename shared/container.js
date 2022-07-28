@@ -13,6 +13,7 @@ export const DefaultContainer = styled.div`
     border-radius: ${props => props.radius ? props.radius : "0"};
     z-index: ${props => props.zIndex ? props.zIndex: "0"};
     opacity: ${props => props.opacity ? props.opacity: ""};
+    top: ${props => props.top ? props.top : "auto"};
 `
 
 export const FlexContainer = styled(DefaultContainer)`
