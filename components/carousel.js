@@ -4,6 +4,7 @@ import Image from 'next/image'
 import firstPic from '../assets/firstPic.png'
 import secondPic from '../assets/secondPic.png'
 import FadeIn from 'react-fade-in';
+import Link from 'next/link';
 import { Text } from '../shared/text'
 import { Button } from '../shared/button'
 
@@ -20,7 +21,7 @@ const Carousel = () => {
                 </FadeIn>
                 <Container type="flex" direction="column" justify="flex-end" align="center" position="absolute" zIndex="1" top="80px" height="calc(100vh - 160px)" width="100vw">
                     <Container margin="0 0 6em 0" type="flex" align="center" direction="column">
-                        <Text align="center" color="white" family="Helvetica neue" size='2em' spacing='4px'>Achieve your goals in our cozy <br />environment</Text>
+                        <Text align="center" color="white" family="Helvetica neue" size='2em' spacing='1px'>Achieve your goals in our cozy <br />environment</Text>
                         <Button spacing="4px" family="Helvetica neue" width="12em">DIRECTIONS</Button>
                     </Container>
                 </Container>
@@ -40,8 +41,14 @@ const Carousel = () => {
                 </FadeIn>
                 <Container type="flex" direction="column" justify="flex-end" align="center" position="absolute" zIndex="1" top="80px" height="calc(100vh - 160px)" width="100vw">
                     <Container margin="0 0 6em 0" type="flex" align="center" direction="column">
-                        <Text align="center" color="white" family="Helvetica neue" size='2em' spacing='4px'>A cup of coffee shared with a friend is <br /> happiness tasted and time well spent</Text>
-                        <Button spacing="4px" family="Helvetica neue" width="12em">MENU</Button>
+                        <Text align="center" color="white" family="Helvetica neue" size='2em' spacing='1px'>A cup of coffee shared with a friend is <br /> happiness tasted and time well spent</Text>
+                        <Button spacing="4px" family="Helvetica neue" width="12em">
+                            <Link href='/menu'>
+                               <a>
+                                    MENU
+                                </a>
+                            </Link>
+                        </Button>
                     </Container>
                 </Container>
             </div>

@@ -17,7 +17,7 @@ const Navbar = () => {
             <Text family="Helvetica neue" size='0.75em' spacing='4px'><Link href='/' ><a>NEWS</a></Link></Text>
         </Container>
         <Container type='flex' align='center' justify='center'>
-            <Container type='image' height='80%' width='100%'>
+            <Container type='image' height='100%' width='100%'>
                 <Link href='/'><a><Image src={lunarreLogo} objectFit='contain' layout="fill"/></a></Link>
             </Container>
         </Container>

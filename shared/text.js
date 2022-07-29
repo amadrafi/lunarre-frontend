@@ -21,6 +21,7 @@ export const H4 = styled.h4`
 
 export const Custom = styled.p`
     font-size: ${props => props.size ? props.size : "0.5rem"};
+    font-style: ${props => props.style ? props.style : 'normal'};
     font-weight: ${props => props.weight ? props.weight: "normal"};
     color: ${props => props.color ? props.color: "black"};
     margin: ${props => props.margin ? props.margin: "0"};
