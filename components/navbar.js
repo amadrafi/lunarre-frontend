@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-    <Container type='grid' row='1fr' column='1fr 1fr 1fr 4fr 1fr 1fr 1fr' height='80px' padding='20px 2vw 0 2vw'>
+    <Container type='grid' row='1fr' column='1fr 1fr 1fr 4fr 1fr 1fr 1fr' height='80px' padding='20px 2vw 20px 2vw'>
         <Container type='flex' align='center' justify='center'>
             <Text family="Helvetica neue" size='0.75em' spacing='4px'><Link href='/menu' ><a>SHOP</a></Link></Text>
         </Container>
