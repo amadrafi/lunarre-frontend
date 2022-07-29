@@ -16,7 +16,9 @@ const Item = ({item}) => {
         <>
             <h1>{item.map(item =>  (
                 <div key={item.id}>
-                    <Text type='h1' color='black'>{item.name}</Text>
+                    <Text type='h2' color='black'>{item.name}</Text>
+                    <Text color='black' size='1em'>{item.price}</Text>
+                    <Text color='black' size='1em'>{item.category}</Text>
                 </div>
             ))}</h1>
         </>
