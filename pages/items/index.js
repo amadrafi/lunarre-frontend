@@ -21,6 +21,7 @@ const Item = ({item}) => {
                     <Text type='h2' color='black'>{item.name}</Text>
                     <Text color='black' size='1em'>{item.price / 1000}</Text>
                     <Text color='black' size='1em'>{item.category}</Text>
+                    
                 </div>
             ))}</div>
         </>
