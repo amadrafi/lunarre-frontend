@@ -28,12 +28,12 @@ const Linktree = () => {
                        data.map(
                         ({val,href})=>{
                             return (
-                                <Container padding="0 1rem 0 1rem" radius="32.04px" margin="0 0 0.5rem 25%" width="50%" color="#2A5947" >
-                                <Link href={href}>
-                                    <a>
-                                        <Text color="#FFFEF3" weight="bold" align="center" size="2.1rem">{val}</Text>
-                                    </a>
-                                </Link>
+                                <Container id={val} padding="0 1rem 0 1rem" radius="32.04px" margin="0 0 0.5rem 25%" width="50%" color="#2A5947" >
+                                    <Link href={href}>
+                                        <a>
+                                            <Text color="#FFFEF3" weight="bold" align="center" size="2.1rem">{val}</Text>
+                                        </a>
+                                    </Link>
                                 </Container>
                             )
                         }
