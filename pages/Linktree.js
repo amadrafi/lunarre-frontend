@@ -1,6 +1,5 @@
 import { Container } from "../shared/container";
 import { Text } from "../shared/text";
-import { motion } from 'framer-motion';
 import lunarreLogo from "../assets/lunarre-logo.png";
 import Navbar from "../components/navbar";
 import Link from "next/link"
