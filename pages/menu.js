@@ -73,13 +73,13 @@ export default function Menu(props) {
       <>
         <Navbar />
 
-        <Container type='grid' column='2fr 3fr 3fr 3fr 3fr' margin='8vw 10vw'>
+        <Container type='grid' column='2fr 3fr 3fr 3fr 3fr' margin='8vw 2vw 8vw 5vw'>
           <Container type='flex' align='center'>
             <Text family='Antic didone' size='3vw'>Shop All</Text>
           </Container>
           {Object.keys(renderMenu())?.map((key) => {
             return (
-              <Container key={key} align='center' type='inline' padding='0 0 0 6em'>
+              <Container key={key} align='center' type='inline' padding='0 0 0 2em'>
                 <Text family='Helvetica neue' size='1em' spacing='4px' weight='500' margin='0 0 2em 0'>{key}</Text>
                 <ul>
                   {renderMenu()[key].items.map((menuDetails) => {
