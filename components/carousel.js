@@ -23,7 +23,7 @@ const Carousel = () => {
                     <Container margin="0 0 6em 0" type="flex" align="center" direction="column">
                         <Text align="center" color="white" family="Helvetica neue" size='2em' spacing='1px'>Achieve your goals in our cozy <br />environment</Text>
                         <Button spacing="4px" family="Helvetica neue" width="12em">
-                            <a target="_blank" href='https://www.google.com/maps/place/Lunarre+by+Walking+Drums+Senopati/@-6.2371115,106.8082156,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f1e7194ec3cd:0xd2355c15fc46be00!8m2!3d-6.2371168!4d106.8104043?shorturl=1'>DIRECTIONS</a>
+                            <a target="_blank" rel="noopener noreferrer" href='https://www.google.com/maps/place/Lunarre+by+Walking+Drums+Senopati/@-6.2371115,106.8082156,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f1e7194ec3cd:0xd2355c15fc46be00!8m2!3d-6.2371168!4d106.8104043?shorturl=1'>DIRECTIONS</a>
                         </Button>
                     </Container>
                 </Container>
