@@ -32,6 +32,7 @@ export const Custom = styled.p`
     text-align: ${props => props.align ? props.align : "start"};
     letter-spacing: ${props => props.spacing ? props.spacing : "" };
     font-family: ${props => props.family ? props.family : ""};
+    text-transform: ${props => props.transform ? props.transform : "none"};
 `;
 
 export const Text = (props) => {
