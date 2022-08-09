@@ -17,7 +17,6 @@ const Linktree = () => {
     //styling masih kurrrrrs
     return (
         <div>
-            <Navbar/>
             <Container color="#FFFEF3;" >
                 <Container type="image">
                     <Link href='/'><a><Image src={lunarreLogo} objectFit='contain' layout="fill"/></a></Link>
