@@ -49,9 +49,9 @@ const Details = ({ item }) => {
             </Container>
           </a>
         </Link>
-        <Text spacing="4px" margin="1em 0 0 0" weight="bold" opacity="0.3" size="1.4rem" transform="uppercase">{item[0].category}</Text>
-        <Text spacing="4px" weight="bold" margin="0.5em 0 0 0" size="1.4rem">{item[0].name}</Text>
-        <Container margin="1em 0 1em 0" color="#2A5947" height="4px" width="50%"></Container>
+        <Text spacing="4px" margin="2.2em 0 0 0" weight="bold" opacity="0.3" size="1.4rem" transform="uppercase">{item[0].category}</Text>
+        <Text spacing="4px" weight="bold" margin="1em 0 0 0" size="1.4rem">{item[0].name}</Text>
+        <Container margin="1.5em 0 1.5em 0" color="#2A5947" height="4px" width="50%"></Container>
         <Text size="1rem">{item[0].description}</Text>
         <Text spacing="4px" size="1.4rem" weight="bold" margin="1em 0 0 0">Rp{item[0].price}.000</Text>
 
