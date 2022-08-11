@@ -18,6 +18,10 @@
     transition: .25s ease;
 }
 
+.unselectedTab:hover {
+    opacity: 1;
+}
+
 .unselectedTab {
     opacity: 0.4;
     transition: .25s ease;

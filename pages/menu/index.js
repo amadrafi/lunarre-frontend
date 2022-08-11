@@ -124,7 +124,7 @@ export default function Menu(props) {
                                       {menuDetails.name}
                                     </Text>
                                     <Text color='black' family='Helvetica neue' weight='500' margin='0 0 1em 0' align='center' size='1.5em' transform='uppercase' spacing='4px'>
-                                      {menuDetails.price} K
+                                      {menuDetails.price}K
                                     </Text>
                                   </Container>
                                 </div>
