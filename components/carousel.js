@@ -14,7 +14,7 @@ const Carousel = () => {
             <div>
                 <FadeIn>
                     <Container height="calc(100vh - 160px)" width="100%">
-                        <Container type='image'>
+                        <Container type='image' height="100%">
                             <Image src={firstPic} objectFit="cover" layout="fill" />
                         </Container>
                     </Container>
@@ -36,7 +36,7 @@ const Carousel = () => {
             <div>
                 <FadeIn>
                     <Container height="calc(100vh - 160px)" width="100%">
-                        <Container type='image'>
+                        <Container type='image' height="100%">
                             <Image src={secondPic} objectFit="cover" layout="fill" />
                         </Container>
                     </Container>
