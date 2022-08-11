@@ -35,8 +35,8 @@ export const getStaticProps = async (ctx) => {
 const Details = ({ item }) => {
   return (
     <Container type="flex" padding="3.5em" align="center">
-      <Container type="image" width="24em" height="580px">
-        <Image src={item[0].main_pic} objectFit="cover" layout="fill" alt="arrow-button.svg"/>
+      <Container type="image">
+        <Image width={380} height={580} src={item[0].main_pic} alt="menu-item.jpeg" priority/>
       </Container>
       <Container type="flex" direction="column" margin="0 0 0 5em">
         <Link href="/menu">

@@ -33,8 +33,8 @@ export const GridContainer = styled(DefaultContainer)`
 
 export const ImageContainer = styled(DefaultContainer)`
     position: relative;
-    height: ${props => props.height ? props.height: "100%"};
-    width: ${props => props.width ? props.width: "100%"};
+    height: ${props => props.height ? props.height: "auto"};
+    width: ${props => props.width ? props.width: "auto"};
 `
 
 export const Container = (props) => {
