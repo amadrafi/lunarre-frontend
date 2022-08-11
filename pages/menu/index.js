@@ -94,12 +94,12 @@ export default function Menu(props) {
       </Container>
       
       <Container>
-        <Tabs>
+        <Tabs selectedTabClassName="selectedTab">
           <TabList>
             <Container type='grid' column='1fr 1fr 1fr 1fr 1fr' justify='center' width='100vw' padding='0 5vw'>
               {Object.keys(renderMenu()).map((key) => {
                 return (
-                  <Tab key={key} style={{cursor: 'pointer'}}>
+                  <Tab key={key} style={{cursor: 'pointer'}} className='unselectedTab' whileHover={{opacity: 1}}>
                     <Text color='black' family='Helvetica neue' weight='400' spacing='4px' size='1.4em' align='center'>{key}</Text>
                   </Tab>
                 );
@@ -115,7 +115,21 @@ export default function Menu(props) {
                       return (
                         <Container height='30em' margin='2em' key={menuDetails.id}>
                           <Container type='image' color='#9D8B5E'>
-                            <Image src={menuDetails.main_pic} objectFit="cover" layout="fill" alt="arrow-button.svg"/>
+                            <Link href={"menu/" + menuDetails.id}>
+                              <a className="menu-container">
+                                <Image src={menuDetails.main_pic} objectFit="cover" layout="fill" alt="arrow-button.svg"/>
+                                <div className='overlay-menu'>
+                                  <Container justify='center' padding='60% 5% 0 5%'>
+                                    <Text color='black' family='Helvetica neue' weight='400' margin='0 0 1em 0' align='center' size='1.2em' transform='uppercase' spacing='4px'>
+                                      {menuDetails.name}
+                                    </Text>
+                                    <Text color='black' family='Helvetica neue' weight='500' margin='0 0 1em 0' align='center' size='1.5em' transform='uppercase' spacing='4px'>
+                                      {menuDetails.price} K
+                                    </Text>
+                                  </Container>
+                                </div>
+                              </a>
+                            </Link>
                           </Container>
                         </Container>
                       );
@@ -130,8 +144,6 @@ export default function Menu(props) {
       <Container width='100vw' height='50vh'>
 
       </Container>
-
-      {/* <GridMenu /> */}
     </>
   )
   
