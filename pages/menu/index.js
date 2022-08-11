@@ -3,6 +3,8 @@ import { Text } from "../../shared/text";
 import { motion } from 'framer-motion';
 import Navbar from "../../components/navbar";
 import Link from "next/link";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { render } from "react-dom";
 
 // Guide to print Menu
 // 1. each li is set in a function called MenuItem but it must be a child of ul
@@ -52,6 +54,7 @@ export default function Menu(props) {
     
     return categories
   }
+
   function MenuItem(props) {
     var page = "menu/" + props.link
     return (
@@ -88,6 +91,45 @@ export default function Menu(props) {
           )})
         }
       </Container>
+      
+      <Container>
+        <Tabs>
+          <TabList>
+            <Container type='grid' column='1fr 1fr 1fr 1fr 1fr' justify='center' width='100vw' padding='0 5vw'>
+              {Object.keys(renderMenu()).map((key) => {
+                return (
+                  <Tab key={key}>
+                    <Text color='black' family='Helvetica neue' weight='400' spacing='4px' size='1em' align='center'>{key}</Text>
+                  </Tab>
+                );
+              })}
+            </Container>
+          </TabList>
+
+            {Object.keys(renderMenu()).map((key) => {
+              return (
+                <TabPanel key={key}>
+                  <Container padding='0 10vw' type='grid' column='1fr 1fr 1fr'>
+                    {renderMenu()[key].items.map((menuDetails) => {
+                      return (
+                        <Container height='30em' margin='1em' color='lightblue' type='block' justify='center'>
+                          
+                          <Text key={menuDetails.id} color='black' align='center'>{menuDetails.name}</Text>
+                        </Container>
+                      );
+                    })}
+                  </Container>
+                </TabPanel>
+              );
+            })}
+        </Tabs>
+      </Container>
+
+      <Container width='100vw' height='50vh'>
+
+      </Container>
+
+      {/* <GridMenu /> */}
     </>
   )
   

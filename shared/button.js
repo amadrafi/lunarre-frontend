@@ -4,6 +4,13 @@ export const PrimaryButton = styled.button`
     font-weight: bold;
     border-style: none;
     cursor: pointer;
+    ${({active}) => {
+        active &&
+        `
+        border-bottom: 1px solid black;
+        opacity: 1;
+        `
+    }}
     
     box-shadow: ${props => props.shadow ? props.shadow : "0px 3px 8px rgba(0, 0, 0, 0.2)"};
     background: ${props => props.background ? props.background : "#FFFEF3"};
