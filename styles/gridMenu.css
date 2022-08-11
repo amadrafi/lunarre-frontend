@@ -1,0 +1,25 @@
+.menu-container:hover .overlay-menu{
+    opacity: 0.8;
+}
+
+.overlay-menu {
+    background-color: white;
+    position: absolute;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    text-transform: capitalize;
+}
+
+.selectedTab {
+    opacity: 1 !important;
+    transition: .25s ease;
+}
+
+.unselectedTab {
+    opacity: 0.4;
+    transition: .25s ease;
+}
+
