@@ -2,6 +2,7 @@ import { Container } from "../../shared/container";
 import { Text } from "../../shared/text";
 import { motion } from 'framer-motion';
 import Navbar from "../../components/navbar";
+import Image from 'next/image';
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { render } from "react-dom";
@@ -99,7 +100,7 @@ export default function Menu(props) {
               {Object.keys(renderMenu()).map((key) => {
                 return (
                   <Tab key={key}>
-                    <Text color='black' family='Helvetica neue' weight='400' spacing='4px' size='1em' align='center'>{key}</Text>
+                    <Text color='black' family='Helvetica neue' weight='400' spacing='4px' size='1.4em' align='center'>{key}</Text>
                   </Tab>
                 );
               })}
@@ -112,9 +113,10 @@ export default function Menu(props) {
                   <Container padding='0 10vw' type='grid' column='1fr 1fr 1fr'>
                     {renderMenu()[key].items.map((menuDetails) => {
                       return (
-                        <Container height='30em' margin='1em' color='lightblue' type='block' justify='center'>
-                          
-                          <Text key={menuDetails.id} color='black' align='center'>{menuDetails.name}</Text>
+                        <Container height='30em' margin='2em'>
+                          <Container type='image'>
+                            <Image src={menuDetails.main_pic} objectFit="cover" layout="fill" alt="arrow-button.svg"/>
+                          </Container>
                         </Container>
                       );
                     })}
