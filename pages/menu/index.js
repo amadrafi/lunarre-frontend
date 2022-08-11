@@ -113,7 +113,7 @@ export default function Menu(props) {
                   <Container padding='0 10vw' type='grid' column='1fr 1fr 1fr'>
                     {renderMenu()[key].items.map((menuDetails) => {
                       return (
-                        <Container height='30em' margin='2em'>
+                        <Container height='30em' margin='2em' key={menuDetails.id}>
                           <Container type='image'>
                             <Image src={menuDetails.main_pic} objectFit="cover" layout="fill" alt="arrow-button.svg"/>
                           </Container>
