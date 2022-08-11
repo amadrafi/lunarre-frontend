@@ -99,7 +99,7 @@ export default function Menu(props) {
             <Container type='grid' column='1fr 1fr 1fr 1fr 1fr' justify='center' width='100vw' padding='0 5vw'>
               {Object.keys(renderMenu()).map((key) => {
                 return (
-                  <Tab key={key}>
+                  <Tab key={key} style={{cursor: 'pointer'}}>
                     <Text color='black' family='Helvetica neue' weight='400' spacing='4px' size='1.4em' align='center'>{key}</Text>
                   </Tab>
                 );
@@ -114,7 +114,7 @@ export default function Menu(props) {
                     {renderMenu()[key].items.map((menuDetails) => {
                       return (
                         <Container height='30em' margin='2em' key={menuDetails.id}>
-                          <Container type='image'>
+                          <Container type='image' color='#9D8B5E'>
                             <Image src={menuDetails.main_pic} objectFit="cover" layout="fill" alt="arrow-button.svg"/>
                           </Container>
                         </Container>
