@@ -114,7 +114,7 @@ export default function Menu(props) {
                     {renderMenu()[key].items.map((menuDetails) => {
                       return (
                         <Container height='30em' margin='2em' key={menuDetails.id}>
-                          <Container type='image' color='#9D8B5E'>
+                          <Container type='image' color='#9D8B5E' height='100%'>
                             <Link href={"menu/" + menuDetails.id}>
                               <a className="menu-container">
                                 <Image src={menuDetails.main_pic} objectFit="cover" layout="fill" alt="arrow-button.svg"/>
