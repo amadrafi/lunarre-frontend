@@ -18,10 +18,10 @@ const NewArrivals = () => {
         </Container>
         <Container type="flex" flex="1" padding="0 2em 0 2em" align="center">
             <Container type="image" margin="0 1em 0 0">
-                <Image src={NewArrivals1} height={450} width={300}  />
+                <Image src={NewArrivals1} height={450} width={300} alt="new-arrivals.jpeg"/>
             </Container>
             <Container type="image">
-                <Image src={NewArrivals2} height={450} width={300}  />
+                <Image src={NewArrivals2} height={450} width={300} alt="new-arrivals2.jpeg"/>
             </Container>           
         </Container>
     </Container>

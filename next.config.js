@@ -7,4 +7,9 @@ module.exports = {
   images: {
     domains: ['lunarre-bucket.s3.amazonaws.com'],
   },
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
 }
