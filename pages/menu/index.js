@@ -93,7 +93,7 @@ export default function Menu(props) {
         }
       </Container>
       
-      <Container>
+      <Container padding='0 0 10vw 0'>
         <Tabs selectedTabClassName="selectedTab">
           <TabList>
             <Container type='grid' column='1fr 1fr 1fr 1fr 1fr' justify='center' width='100vw' padding='0 5vw'>
@@ -139,10 +139,6 @@ export default function Menu(props) {
               );
             })}
         </Tabs>
-      </Container>
-
-      <Container width='100vw' height='50vh'>
-
       </Container>
     </>
   )
