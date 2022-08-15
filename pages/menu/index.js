@@ -117,7 +117,7 @@ export default function Menu(props) {
                           <Container type='image' color='#9D8B5E' height='100%'>
                             <Link href={"menu/" + menuDetails.id}>
                               <a className="menu-container">
-                                <Image src={menuDetails.main_pic} objectFit="cover" layout="fill" alt="arrow-button.svg"/>
+                                <Image src={menuDetails.main_pic} objectFit="cover" layout="fill" alt={menuDetails.name}/>
                                 <div className='overlay-menu'>
                                   <Container justify='center' padding='60% 5% 0 5%'>
                                     <Text color='black' family='Helvetica neue' weight='400' margin='0 0 1em 0' align='center' size='1.2em' transform='uppercase' spacing='4px'>
