@@ -6,10 +6,13 @@ import Link from 'next/link'
 import { Text } from '../shared/text'
 import NewArrivals1 from '../assets/newArrivals1.png'
 import NewArrivals2 from '../assets/newArrivals2.png'
+import useWindowSize from "../shared/windowSizeFunction"
 
 const NewArrivals = () => {
+    const {width} = useWindowSize()
+    const isMobile = width<857;
   return (
-    <Container type="flex" height="100vh" width="90%">
+    <Container direction={isMobile?"column":"row"} type="flex" height="100vh" width="90%">
         <Container padding="0 2em 0 2em" type="flex" direction="column" flex="1" justify="center" align="center">
             <Text color="#444444" size="1.2em" family="Helvetica neue" spacing='4px'>NEW ARRIVALS</Text>
             <Text family="Antic didone" size="3em" weight="bold" margin="0.5em 0 0.5em 0" spacing="1px">&quot;Freshest of the Fresh&quot;</Text>

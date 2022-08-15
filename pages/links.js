@@ -15,7 +15,7 @@ const Linktree = () => {
         {val:"Tiktok" , href : "http://www.tiktok.com/@lunarre.jkt"}
     ]
     const window= useWindowSize();
-    const isMobile = window.width<800;
+    const isMobile = window.width<857;
     //styling masih kurrrrrs
     return (
         <div>
@@ -31,7 +31,7 @@ const Linktree = () => {
                                 <Container key={val} padding="0 1rem 0 1rem" radius="32.04px" margin={"0 0 0.5rem ".concat( isMobile?"5%":"25%")} width={isMobile?"90%":"50%"} color="#2A5947" >
                                     <Link href={href}>
                                         <a>
-                                            <Text color="#FFFEF3" weight="bold" align="center" size="2.1rem">{val}</Text>
+                                            <Text family="Helvetica neue" color="#FFFEF3" weight="bold" align="center" size="2.1rem">{val}</Text>
                                         </a>
                                     </Link>
                                 </Container>
