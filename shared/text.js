@@ -33,6 +33,7 @@ export const Custom = styled.p`
     letter-spacing: ${props => props.spacing ? props.spacing : "" };
     font-family: ${props => props.family ? props.family : ""};
     text-transform: ${props => props.transform ? props.transform : "none"};
+    white-space: ${props => props.wSpace ? props.wSpace : "normal"}
 `;
 
 export const Text = (props) => {
