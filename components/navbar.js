@@ -1,20 +1,18 @@
 import Image from "next/image";
 import { Container } from "../shared/container";
 import { Text } from "../shared/text";
-import { Button } from "../shared/button"
 import lunarreLogo from "../assets/lunarre-logo.png";
 import Link from "next/link";
-import useWindowSize from "../shared/windowSizeFunction"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import hamburger from '../assets/hamburger.svg'
 import {Divide as Hamburger} from 'hamburger-react'
 
 const NAV_CONTENT = [
-    {content:"SHOP",url:"/"},
+    {content:"SHOP",url:"/menu"},
     {content:"PROMO",url:"/"},
     {content:"NEWS",url:"/"},
     {content:lunarreLogo },
-    {content:"LOCATIONS",url:"/"},
+    {content:"LOCATIONS",url:"https://goo.gl/maps/icsHcd4fPMDo7EuN7"},
     {content:"LEARN",url:"/"},
     {content:"ABOUT US",url:"/"}
 ]
@@ -78,10 +76,9 @@ const DesktopNav = ()=>{
     )
 }
 
-const Navbar = () => {
-    const { width,height } = useWindowSize()
+const Navbar = (props) => {
     const [navbarState,setNavbarState] = useState(false)
-    const isMobile = width<857 //|| height<600
+    const {isMobile} = props;
     return (
         isMobile?
         <MobileNavbar active={navbarState} toggle={setNavbarState}/>

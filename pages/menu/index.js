@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import useWindowSize from "../../shared/windowSizeFunction";
 // Guide to print Menu
 // 1. each li is set in a function called MenuItem but it must be a child of ul
 // 2. there are two props, 1: itemName, 2:link
@@ -12,8 +11,7 @@ import useWindowSize from "../../shared/windowSizeFunction";
 // 4. link is supposed to be a link for the pop up page
 
 export default function Menu(props) {
-  const {width,height} = useWindowSize()
-  const isMobile = width<857 //|| height<600
+  const {isMobile} = props;
   // function to render the menu from heroku
   function renderMenu() {
     let categories = {
