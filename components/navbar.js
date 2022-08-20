@@ -6,6 +6,8 @@ import lunarreLogo from "../assets/lunarre-logo.png";
 import Link from "next/link";
 import useWindowSize from "../shared/windowSizeFunction"
 import { useEffect, useState } from "react";
+import hamburger from '../assets/hamburger.svg'
+import {Divide as Hamburger} from 'hamburger-react'
 
 const NAV_CONTENT = [
     {content:"SHOP",url:"/"},
@@ -19,13 +21,23 @@ const NAV_CONTENT = [
 
 const MobileNavbar = (props) => {
     const {active} = props
+    const [isOpen, setOpen] = useState(false)
     return (
         <>
-        <Button {...props} type="tertiary" zIndex="999" 
-        position="absolute" width="2rem" top="2rem" right="1rem" radius="0" 
-        >Nav</Button>
-        <Container {...props} transition="transform 250ms ease-out" transform={active?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
-        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position={active?"absolute":"fixed"}
+        <Container type="flex" padding="0.5em">
+            <Container type='image' height='50px' width='100%'>
+                <Link href='/'><a><Image src={lunarreLogo} objectFit='contain' layout="fill"/></a></Link>
+            </Container>
+            <Container zIndex="999">
+                <Hamburger {...props} color="black" toggled={isOpen} toggle={setOpen} />
+            </Container>
+        </Container>
+        {/* <Button {...props} color="white" zIndex="999" 
+        position="absolute" padding="1rem" width="1rem" right="1rem" radius="0" 
+        >
+        </Button> */}
+        <Container {...props} transition="transform 250ms ease-out" transform={isOpen?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
+        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position={isOpen?"absolute":"fixed"}
         backdrop_filter="blur(1rem)"
         >
             {NAV_CONTENT.map(
