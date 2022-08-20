@@ -1,11 +1,9 @@
 import { Container } from "../../shared/container";
 import { Text } from "../../shared/text";
 import { motion } from 'framer-motion';
-import Navbar from "../../components/navbar";
 import Image from 'next/image';
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { render } from "react-dom";
 
 // Guide to print Menu
 // 1. each li is set in a function called MenuItem but it must be a child of ul
@@ -93,7 +91,7 @@ export default function Menu(props) {
         }
       </Container>
       
-      <Container>
+      <Container padding='0 0 10vw 0'>
         <Tabs selectedTabClassName="selectedTab">
           <TabList>
             <Container type='grid' column='1fr 1fr 1fr 1fr 1fr' justify='center' width='100vw' padding='0 5vw'>
@@ -139,10 +137,6 @@ export default function Menu(props) {
               );
             })}
         </Tabs>
-      </Container>
-
-      <Container width='100vw' height='50vh'>
-
       </Container>
     </>
   )
