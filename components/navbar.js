@@ -24,8 +24,8 @@ const MobileNavbar = (props) => {
     const [isOpen, setOpen] = useState(false)
     return (
         <>
-        <Container type="flex" padding="0.5em" justify="flex-end">
-            <Container type='image' height='50px' width='75%'>
+        <Container type="flex" padding="0.5em" justify="space-between">
+            <Container type='image' height='50px' width='30%'>
                 <Link href='/'><a><Image src={lunarreLogo} objectFit='contain' layout="fill"/></a></Link>
             </Container>
             <Container zIndex="999">
