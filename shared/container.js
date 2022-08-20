@@ -10,6 +10,7 @@ export const DefaultContainer = styled.div`
     margin: ${props => props.margin ? props.margin : "0"};
     width: ${props => props.width ? props.width : ""};
     height: ${props => props.height ? props.height : ""};
+    max-height: ${props => props.maxHeight ? props.maxHeight : ""};
     flex: ${props => props.flex ? props.flex : "0 1 auto"}; 
     padding: ${props => props.padding ? props.padding : "0"};
     background-color: ${props => props.color ? props.color : "none"};
