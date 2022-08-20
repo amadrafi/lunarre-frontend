@@ -22,10 +22,10 @@ const MobileNavbar = (props) => {
     return (
         <>
         <Button {...props} type="tertiary" zIndex="999" 
-        position="absolute" width="2rem" top="2rem" right="1rem" radius="0" 
+        position="fixed" width="2rem" top="2rem" right="1rem" radius="0" 
         >Nav</Button>
-        <Container {...props} transition="transform 250ms ease-out" transform={active?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
-        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position={active?"absolute":"fixed"}
+        <Container transition="transform 250ms ease-out" transform={active?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
+        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position="fixed"
         backdrop_filter="blur(1rem)"
         >
             {NAV_CONTENT.map(

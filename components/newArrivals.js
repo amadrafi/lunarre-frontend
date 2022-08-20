@@ -19,12 +19,12 @@ const NewArrivals = () => {
             <Text margin="0 0 1em 0" color="#444444" align="center" size="1.2em" family="Helvetica neue" weight='400' spacing='1px'>Featuring the freshest in our beautiful range of seasonal coffees sourced throughout the year.</Text>
             <Button background="#2A5947" width="30%"><Link href='/menu'><a><Text size='0.8em' align='center' spacing='4px' color="#FFFEF3">SHOP NOW</Text></a></Link></Button>
         </Container>
-        <Container type="flex" flex="1" padding="0 2em 0 2em" align="center">
+        <Container type="flex" flex="1" padding="0 2em 0 2em" align="center" justify="center">
             <Container type="image" margin="0 1em 0 0">
-                <Image src={NewArrivals1} height={450} width={300} alt="new-arrivals.jpeg"/>
+                <Image src={NewArrivals1} height={300} width={200} alt="new-arrivals.jpeg"/>
             </Container>
             <Container type="image">
-                <Image src={NewArrivals2} height={450} width={300} alt="new-arrivals2.jpeg"/>
+                <Image src={NewArrivals2} height={300} width={200} alt="new-arrivals2.jpeg"/>
             </Container>           
         </Container>
     </Container>
