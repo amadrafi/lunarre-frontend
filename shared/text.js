@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const H1 = styled.h1`
     font-size: 2rem;
     color: ${props => props.color ? props.color: "black"};
+    text-align: ${props => props.align ? props.align : "start"};
 `
 
 export const H2 = styled.h2`

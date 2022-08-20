@@ -25,12 +25,12 @@ const MobileNavbar = (props) => {
             <Container type='image' height='50px' width='30%'>
                 <Link href='/'><a><Image src={lunarreLogo} objectFit='contain' layout="fill"/></a></Link>
             </Container>
-            <Container zIndex="999">
+            <Container position="fixed" top="1rem" right="2rem" zIndex="999">
                 <Hamburger {...props} color="black" toggled={active} toggle={toggle} />
             </Container>
         </Container>
         <Container {...props} transition="transform 250ms ease-out" transform={active?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
-        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position={active?"absolute":"fixed"}
+        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position="fixed"
         backdrop_filter="blur(1rem)"
         >
             {NAV_CONTENT.map(
