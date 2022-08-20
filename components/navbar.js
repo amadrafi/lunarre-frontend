@@ -20,8 +20,7 @@ const NAV_CONTENT = [
 ]
 
 const MobileNavbar = (props) => {
-    const {active} = props
-    const [isOpen, setOpen] = useState(false)
+    const { active,toggle } = props
     return (
         <>
         <Container type="flex" padding="0.5em" justify="space-between">
@@ -29,15 +28,11 @@ const MobileNavbar = (props) => {
                 <Link href='/'><a><Image src={lunarreLogo} objectFit='contain' layout="fill"/></a></Link>
             </Container>
             <Container zIndex="999">
-                <Hamburger {...props} color="black" toggled={isOpen} toggle={setOpen} />
+                <Hamburger {...props} color="black" toggled={active} toggle={toggle} />
             </Container>
         </Container>
-        {/* <Button {...props} color="white" zIndex="999" 
-        position="absolute" padding="1rem" width="1rem" right="1rem" radius="0" 
-        >
-        </Button> */}
-        <Container {...props} transition="transform 250ms ease-out" transform={isOpen?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
-        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position={isOpen?"absolute":"fixed"}
+        <Container {...props} transition="transform 250ms ease-out" transform={active?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
+        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position={active?"absolute":"fixed"}
         backdrop_filter="blur(1rem)"
         >
             {NAV_CONTENT.map(
@@ -84,15 +79,12 @@ const DesktopNav = ()=>{
 }
 
 const Navbar = () => {
-    const {width } = useWindowSize()
+    const { width,height } = useWindowSize()
     const [navbarState,setNavbarState] = useState(false)
-    const isMobile = width<857
+    const isMobile = width<857 //|| height<600
     return (
         isMobile?
-        <MobileNavbar active={navbarState} onClick={(e)=>{
-            setNavbarState(!navbarState);
-        }
-        }/>
+        <MobileNavbar active={navbarState} toggle={setNavbarState}/>
             :
         <DesktopNav/>
     )

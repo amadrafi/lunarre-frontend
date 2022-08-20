@@ -3,6 +3,7 @@ import { Container } from "../../shared/container"
 import { Text } from "../../shared/text"
 import backArrow from "../../assets/long_left.svg"
 import Link from "next/link"
+import useWindowSize from "../../shared/windowSizeFunction"
 
 export const getStaticPaths = async () => {
   const res = await fetch('https://lunarrebackend.herokuapp.com/v1/menu/')
@@ -33,12 +34,14 @@ export const getStaticProps = async (ctx) => {
 }
 
 const Details = ({ item }) => {
+  const {width,height} = useWindowSize()
+  const isMobile = width<857 //|| height<600
   return (
-    <Container type="flex" padding="3.5em" align="center">
+    <Container type="flex" direction={isMobile?"column":"row"} padding="3.5em" align="center">
       <Container type="image">
         <Image width={380} height={580} src={item[0].main_pic} alt="menu-item.jpeg" priority/>
       </Container>
-      <Container type="flex" direction="column" margin="0 0 0 5em">
+      <Container type="flex" direction="column" margin={isMobile?'2em 0 0 0':"0 0 0 5em"}>
         <Link href="/menu">
           <a>
             <Container type="flex">

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-
+import useWindowSize from "../../shared/windowSizeFunction";
 // Guide to print Menu
 // 1. each li is set in a function called MenuItem but it must be a child of ul
 // 2. there are two props, 1: itemName, 2:link
@@ -12,6 +12,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 // 4. link is supposed to be a link for the pop up page
 
 export default function Menu(props) {
+  const {width,height} = useWindowSize()
+  const isMobile = width<857 //|| height<600
   // function to render the menu from heroku
   function renderMenu() {
     let categories = {
@@ -71,7 +73,7 @@ export default function Menu(props) {
   
   return (
     <>
-      <Container type='grid' column='2fr 3fr 3fr 3fr 3fr' margin='8vw 10vw'>
+      {isMobile?"":<Container type='grid' column='2fr 3fr 3fr 3fr 3fr' margin='8vw 10vw'>
         <Container type='flex' align='center'>
           <Text family='Antic didone' size='3vw'>Shop All</Text>
         </Container>
@@ -89,16 +91,16 @@ export default function Menu(props) {
             </Container>
           )})
         }
-      </Container>
+      </Container>}
       
       <Container padding='0 0 10vw 0'>
         <Tabs selectedTabClassName="selectedTab">
           <TabList>
-            <Container type='grid' column='1fr 1fr 1fr 1fr 1fr' justify='center' width='100vw' padding='0 5vw'>
+            <Container type='grid' column={`1fr 1fr ${isMobile?'':'1fr 1fr'}`} justify='center' padding='5px' width='100vw' >
               {Object.keys(renderMenu()).map((key) => {
                 return (
-                  <Tab key={key} style={{cursor: 'pointer'}} className='unselectedTab' whileHover={{opacity: 1}}>
-                    <Text color='black' family='Helvetica neue' weight='400' spacing='4px' size='1.4em' align='center'>{key}</Text>
+                  <Tab key={key} style={{cursor: 'pointer'}} marginWidth="10px" className='unselectedTab' whileHover={{opacity: 1}}>
+                    <Text color='black' margin="10px" family='Helvetica neue' weight='400' spacing='4px' size='1.4em' align='center'>{key}</Text>
                   </Tab>
                 );
               })}
@@ -108,7 +110,7 @@ export default function Menu(props) {
             {Object.keys(renderMenu()).map((key) => {
               return (
                 <TabPanel key={key}>
-                  <Container padding='0 10vw' type='grid' column='1fr 1fr 1fr'>
+                  <Container padding='0 10vw' type='grid' column={`1fr ${isMobile?'':'1fr 1fr'}`}>
                     {renderMenu()[key].items.map((menuDetails) => {
                       return (
                         <Container height='30em' margin='2em' key={menuDetails.id}>
