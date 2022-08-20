@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+const plainContainer = (props)=>{
+    const {children} = props
+    return (<div {...props}>{children}</div>)
+}
+
 export const DefaultContainer = styled.div`
     display: block;
     margin: ${props => props.margin ? props.margin : "0"};
@@ -14,6 +19,10 @@ export const DefaultContainer = styled.div`
     z-index: ${props => props.zIndex ? props.zIndex: "0"};
     opacity: ${props => props.opacity ? props.opacity: ""};
     top: ${props => props.top ? props.top : "auto"};
+    inset: ${props => props.inset ? props.inset : "none"};
+    backdrop-filter: ${props => props.backdrop_filter ? props.backdrop_filter : "none"};
+    transform: ${props => props.transform ? props.transform : "0"};
+    transition: ${props => props.transition ? props.transition : "none"};
 `
 
 export const FlexContainer = styled(DefaultContainer)`

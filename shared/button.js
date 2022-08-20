@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const PrimaryButton = styled.button`
+const primarybutton = (props) => {
+    const { className , children ,onClick} = props
+    return(<button className={className} {...props}>{children}</button>)
+}
+
+export const PrimaryButton = styled(primarybutton)`
     font-weight: bold;
     border-style: none;
     cursor: pointer;
@@ -11,7 +16,10 @@ export const PrimaryButton = styled.button`
         opacity: 1;
         `
     }}
-    
+    top:${props => props.top ? props.top : "none"};
+    right:${props => props.right ? props.right : "none"};
+    position: ${props => props.position ? props.position : "none"};
+    z-index: ${props => props.zIndex ? props.zIndex: "0"};
     box-shadow: ${props => props.shadow ? props.shadow : "0px 3px 8px rgba(0, 0, 0, 0.2)"};
     background: ${props => props.background ? props.background : "#FFFEF3"};
     border-radius: ${props => props.radius ? props.radius:"50px"};
