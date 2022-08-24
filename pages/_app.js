@@ -3,8 +3,11 @@ import Navbar from '../components/navbar'
 import '../styles/globals.css'
 import '../styles/gridMenu.css'
 import Footer from '../components/footer'
+import useWindowSize from "../shared/windowSizeFunction";
 
 function MyApp({ Component, pageProps }) {
+  const { width,height } = useWindowSize();
+  const isMobile = width<857;
   return (
     <>
       <Head>
@@ -13,9 +16,9 @@ function MyApp({ Component, pageProps }) {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Lunarre by Walking Drums</title>
       </Head>
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
+      <Navbar winSize={{width:width,height:height}} isMobile={isMobile} />
+      <Component winSize={{width:width,height:height}} isMobile={isMobile} {...pageProps} />
+      <Footer winSize={{width:width,height:height}} isMobile={isMobile}/>
     </>
   )
 }

@@ -1,43 +1,37 @@
 import Image from "next/image";
 import { Container } from "../shared/container";
 import { Text } from "../shared/text";
-import { Button } from "../shared/button"
 import lunarreLogo from "../assets/lunarre-logo.png";
 import Link from "next/link";
-import useWindowSize from "../shared/windowSizeFunction"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import hamburger from '../assets/hamburger.svg'
 import {Divide as Hamburger} from 'hamburger-react'
 
+//TODO: change as soon as pages of each links created
 const NAV_CONTENT = [
     {content:"SHOP",url:"/menu"},
-    {content:"PROMO",url:"/"},
-    {content:"NEWS",url:"/"},
+    {content:"PROMO",url:"/soon"},
+    {content:"NEWS",url:"/soon"},
     {content:lunarreLogo },
-    {content:"LOCATIONS",url:"/"},
-    {content:"LEARN",url:"/"},
-    {content:"ABOUT US",url:"/"}
+    {content:"LOCATIONS",url:"https://goo.gl/maps/icsHcd4fPMDo7EuN7"},
+    {content:"LEARN",url:"/soon"},
+    {content:"ABOUT US",url:"/soon"}
 ]
 
 const MobileNavbar = (props) => {
-    const {active} = props
-    const [isOpen, setOpen] = useState(false)
+    const { active,toggle } = props
     return (
         <>
         <Container type="flex" padding="0.5em" justify="space-between">
             <Container type='image' height='50px' width='30%'>
                 <Link href='/'><a><Image src={lunarreLogo} objectFit='contain' layout="fill"/></a></Link>
             </Container>
-            <Container zIndex="999">
-                <Hamburger {...props} color="black" toggled={isOpen} toggle={setOpen} />
+            <Container position="fixed" top="1rem" right="2rem" zIndex="999">
+                <Hamburger {...props} color="black" toggled={active} toggle={toggle} />
             </Container>
         </Container>
-        {/* <Button {...props} color="white" zIndex="999" 
-        position="absolute" padding="1rem" width="1rem" right="1rem" radius="0" 
-        >
-        </Button> */}
-        <Container {...props} transition="transform 250ms ease-out" transform={isOpen?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
-        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position={isOpen?"absolute":"fixed"}
+        <Container {...props} transition="transform 250ms ease-out" transform={active?"translateX(0)":"translateX(100%)"} color="#FFFEF3BE"  
+        zIndex="100" inset="0 0 0 30%" padding="min(30vh,10rem) 2rem" position="fixed"
         backdrop_filter="blur(1rem)"
         >
             {NAV_CONTENT.map(
@@ -83,16 +77,12 @@ const DesktopNav = ()=>{
     )
 }
 
-const Navbar = () => {
-    const {width } = useWindowSize()
+const Navbar = (props) => {
     const [navbarState,setNavbarState] = useState(false)
-    const isMobile = width<857
+    const {isMobile} = props;
     return (
         isMobile?
-        <MobileNavbar active={navbarState} onClick={(e)=>{
-            setNavbarState(!navbarState);
-        }
-        }/>
+        <MobileNavbar active={navbarState} toggle={setNavbarState}/>
             :
         <DesktopNav/>
     )

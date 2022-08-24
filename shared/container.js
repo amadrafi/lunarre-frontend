@@ -20,10 +20,12 @@ export const DefaultContainer = styled.div`
     z-index: ${props => props.zIndex ? props.zIndex: "0"};
     opacity: ${props => props.opacity ? props.opacity: ""};
     top: ${props => props.top ? props.top : "auto"};
+    right: ${props => props.right ? props.right : "auto"};
     inset: ${props => props.inset ? props.inset : "none"};
     backdrop-filter: ${props => props.backdrop_filter ? props.backdrop_filter : "none"};
     transform: ${props => props.transform ? props.transform : "0"};
     transition: ${props => props.transition ? props.transition : "none"};
+    box-shadow: ${props => props.boxShadow ? props.boxShadow : "none"};
 `
 
 export const FlexContainer = styled(DefaultContainer)`

@@ -32,13 +32,13 @@ export const getStaticProps = async (ctx) => {
   }
 }
 
-const Details = ({ item }) => {
+const Details = ({ item ,isMobile,winSize }) => {
   return (
-    <Container type="flex" padding="3.5em" align="center">
+    <Container type="flex" direction={isMobile?"column":"row"} padding="3.5em" align="center">
       <Container type="image">
         <Image width={380} height={580} src={item[0].main_pic} alt="menu-item.jpeg" priority/>
       </Container>
-      <Container type="flex" direction="column" margin="0 0 0 5em">
+      <Container type="flex" direction="column" margin={isMobile?'2em 0 0 0':"0 0 0 5em"}>
         <Link href="/menu">
           <a>
             <Container type="flex">
