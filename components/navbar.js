@@ -7,14 +7,15 @@ import { useState } from "react";
 import hamburger from '../assets/hamburger.svg'
 import {Divide as Hamburger} from 'hamburger-react'
 
+//TODO: change as soon as pages of each links created
 const NAV_CONTENT = [
     {content:"SHOP",url:"/menu"},
-    {content:"PROMO",url:"/"},
-    {content:"NEWS",url:"/"},
+    {content:"PROMO",url:"/soon"},
+    {content:"NEWS",url:"/soon"},
     {content:lunarreLogo },
     {content:"LOCATIONS",url:"https://goo.gl/maps/icsHcd4fPMDo7EuN7"},
-    {content:"LEARN",url:"/"},
-    {content:"ABOUT US",url:"/"}
+    {content:"LEARN",url:"/soon"},
+    {content:"ABOUT US",url:"/soon"}
 ]
 
 const MobileNavbar = (props) => {
