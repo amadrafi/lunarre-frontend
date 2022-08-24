@@ -10,7 +10,7 @@ import hamburger from '../assets/hamburger.svg'
 import {Divide as Hamburger} from 'hamburger-react'
 
 const NAV_CONTENT = [
-    {content:"SHOP",url:"/"},
+    {content:"SHOP",url:"/menu"},
     {content:"PROMO",url:"/"},
     {content:"NEWS",url:"/"},
     {content:lunarreLogo },
